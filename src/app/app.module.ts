@@ -1,22 +1,33 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+  
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { QuotesComponent } from './quotes/quotes.component';
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { QuoteComponent } from './quote/quote.component';
 import { HighlightDirective } from './highlight.directive';
+import { DetailsComponent } from './details/details.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    QuotesComponent,
-    HighlightDirective
+    FormComponent,
+    QuoteComponent,
+    HighlightDirective,
+    DetailsComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
