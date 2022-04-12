@@ -2,8 +2,8 @@
 # Quotes
 
 ##### By Carol Gitonga
-Description
-This project is a web application made using AngularJs where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+This website uses AngularJs where users can create quotes and have those quotes voted on.
+
 
 
 ## Table of Content
@@ -16,7 +16,7 @@ This project is a web application made using AngularJs where users can create qu
 + [Authors Info](#author-Info)
 
 ## Description
-<p>This is  a website that uses AngularJs where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.</p>
+<p>This project is a web application made using AngularJs where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.</p>
 
 ## Installation
 
