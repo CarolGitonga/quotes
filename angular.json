@@ -109,6 +109,9 @@
               "./node_modules/hammerjs/hammer.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
