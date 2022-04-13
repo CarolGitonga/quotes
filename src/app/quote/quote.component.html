@@ -1,5 +1,7 @@
-
+<!--Main Navigation-->
 <header class="intro-header ">
+
+  <!--Navbar-->
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <mdb-navbar-brand>
       <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>
@@ -23,45 +25,57 @@
     </links>
   </mdb-navbar>
 
-  <section class="view intro-2">
-    <div class="full-bg-img mask rgba-gradient">
-      <div class="container flex-center">
-        <div class="d-flex align-items-center content-height w-100">
-          <div class="row flex-center pt-5 mt-3 w-100">
-            <div class="col-md-6 text-center text-md-left mb-5">
-              <div class="white-text ">
-                <h2 class="h1 h1-responsive font-bold wow fadeInLeft" data-wow-delay="0.3s"> Quotes </h2>
-                <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
-                <h4 class="wow fadeInLeft" data-wow-delay="0.3s">
-                  <div class="myQuote " *ngFor="let quote of quotes; let i=index">
-                    <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
-                      {{quote.quote}}
+  <!--Intro Section-->
+  <div class="row">
+    <div class="col-sm-6">
+      <section class="view intro-2">
+        <div class="full-bg-img mask rgba-gradient">
+          <div class="container flex-center">
+            <div class="d-flex align-items-center content-height w-100">
+              <div class="row flex-center pt-5 mt-3 w-100">
+                
+                  <div class="white-text ">
+                    <h2 class="h1 h1-responsive font-bold wow text-center" data-wow-delay="0.3s"> Quotes </h2>
+                    <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                    <h4 class="wow fadeInLeft" data-wow-delay="0.3s">
+                      <div class="myQuote " *ngFor="let quote of quotes; let i=index">
+                        <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" appHighlight
+                          *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
+                          {{quote.quote}}
 
-                    </p>
-                     <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}
-                     </p>
+                        </p>
+                        <p class="h3 h3-responsive font-bold wow fadeInLeft" data-wow-delay="1s"
+                          *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}
+                        </p>
 
-                    <app-details [quote]="quote"></app-details>
-                    <button class="btn btn-info" (click)="upvote(i)">Upvote </button>
-                    <button class="btn btn-info" (click)="downvote(i)">Downvote </button>
-                    <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+                        <app-details [quote]="quote"></app-details>
+                        <button class="btn btn-info" (click)="upvote(i)">Upvote </button>
+                        <button class="btn btn-info" (click)="downvote(i)">Downvote </button>
+                        <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+                      </div>
+                    </h4>
+                    <br>
+                    
                   </div>
-                </h4>
-                <br>
-                <a mdbBtn color="white" outline="true" class="wow fadeInLeft waves-light" data-wow-delay="0.3s" mdbWavesEffect>explore further</a>
+                
               </div>
-            </div>
-
-            <div class="col-md-6 col-xl-5 offset-xl-1">
-              
-              <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                <app-form (emitQuote)="addQuote($event)"></app-form>
-              </div>
+            
+                <div class="">
+                  <!--Form-->
+                  <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                    <app-form (emitQuote)="addQuote($event)"></app-form>
+                  </div>
+                  <!--/.Form-->
+                </div>
               
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
+  </div>
 </header>
+
+
+
+      
