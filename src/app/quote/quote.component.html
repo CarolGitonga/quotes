@@ -1,5 +1,7 @@
-
+<!--Main Navigation-->
 <header class="intro-header ">
+
+  <!--Navbar-->
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <mdb-navbar-brand>
       <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>
@@ -23,6 +25,8 @@
     </links>
   </mdb-navbar>
 
+  <!--Intro Section-->
+  
   <section class="view intro-2">
     <div class="full-bg-img mask rgba-gradient">
       <div class="container flex-center">
@@ -53,15 +57,17 @@
             </div>
 
             <div class="col-md-6 col-xl-5 offset-xl-1">
-              
+              <!--Form-->
               <div class="card wow fadeInRight" data-wow-delay="0.3s">
                 <app-form (emitQuote)="addQuote($event)"></app-form>
               </div>
-              
+              <!--/.Form-->
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 </header>
+<!--Main Navigation-->

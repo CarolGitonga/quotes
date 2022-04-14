@@ -1,7 +1,9 @@
 .intro-header {
     height: unset !important;
   }
-  
+  .card-body {
+    text-align: center;
+  }
   .view {
     height: 100vh !important;
   }
